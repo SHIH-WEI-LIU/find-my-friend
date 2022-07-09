@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <title>find-my-friends</title>
+</head>
+
+<body>
+  <!--  nav  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(#141e30, #243b55)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://uploads-ssl.webflow.com/60d29cc33f302e62731cf0e1/60d29cc33f302ede181cf183_AC%20nav%20logo.png"
+          alt="" width="20%" height="40%" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link active" style="color:white" aria-current="page" href="index.html"><i
+                class="fa-solid fa-house" style="font-size:40px"></i><span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="favorite.html" style="color:red"><i class="fa-solid fa-heart"
+                style="font-size:40px">
+                <div id="count"></div>
+              </i></a>
+          </li>
+
+          <!-- search -->
+          <form class="d-flex" id="search-form">
+            <label class="visually-hidden">Search Keyword</label>
+            <input type="search" class="form-control me-2" id="search-input" placeholder="Search" aria-label="Search">
+
+            <button class="btn btns" type="submit" id="search-submit-button">
+              <div class="login-box">
+                <div class="a">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Search
+                </div>
+            </button>
+          </form>
+      </div>
+    </div>
+  </nav>
+  <!-- card -->
+  <div class="container d-flex flex-wrap justify-content-center py-2" id="data-panel">
+
+  </div>
+  <!--paging -->
+  <nav aria-label="Page navigation example">
+    <ul ul class="pagination justify-content-center" id="paginator">
+
+    </ul>
+  </nav>
+  <!-- modal -->
+  <div class="modal" tabindex="-1" id="personal-info">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="friends-modal-title">Name</h5>
+
+        </div>
+        <div class="modal-body">
+          <img class="friends-modal-image" src="" alt="">
+
+          <p id="friends-modal-data">information</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">bye</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--  js -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://kit.fontawesome.com/10b13ec982.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
